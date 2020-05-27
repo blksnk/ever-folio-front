@@ -1,4 +1,5 @@
 module.exports = {
+  publicPath: '/ever-folio-front/',
   css: {
     loaderOptions: {
       sass: {
