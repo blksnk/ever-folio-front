@@ -1,32 +1,90 @@
 <template>
-  <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
-  </div>
+  <main id="app_container">
+    <Home />
+    <Work />
+  </main>
 </template>
 
+<script>
+import Home from '@/views/Home.vue';
+import Work from '@/views/Work.vue';
+
+export default {
+  name: 'App',
+  components: {
+    Work,
+    Home,
+  },
+};
+</script>
+
 <style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+* {
+  box-sizing: border-box;
+  text-rendering: optimizeLegibility;
 }
 
-#nav {
-  padding: 30px;
+body {
+  margin: 0;
+  background-color: $color_primary;
+  overflow: hidden;
+}
 
-  a {
-    font-weight: bold;
-    color: #2c3e50;
+h1,
+h2,
+h3,
+h4,
+a,
+span,
+ul,
+li,
+button,
+p {
+  margin: 0;
+  padding: 0;
+  user-select: none;
+  font-weight: normal;
+  line-height: normal;
+}
 
-    &.router-link-exact-active {
-      color: #42b983;
-    }
+button {
+  cursor: pointer;
+  pointer-events: all;
+}
+
+h1,
+h2,
+h3 {
+  font-family: 'Love';
+  align-self: start;
+}
+
+h1 {
+  font-size: $font_title;
+  color: $color_primary;
+}
+
+h2 {
+  font-size: $font_big;
+  color: $color_white;
+}
+
+h3 {
+  color: $color_tertiary;
+  font-size: $font_big;
+  text-transform: uppercase;
+}
+
+#app_container {
+  background-color: $color_black;
+  border-radius: $radius;
+  border: 1px solid $color_primary;
+  height: 100vh;
+  width: 100%;
+  overflow-y: scroll;
+
+  &::-webkit-scrollbar {
+    display: none;
   }
 }
 </style>
