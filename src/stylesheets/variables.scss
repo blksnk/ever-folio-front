@@ -1,0 +1,32 @@
+$color_primary: #ffded4;
+$color_secondary: #b1a9d2;
+$color_tertiary: #6f739c;
+$color_quad: #f3c8bb;
+$color_black: #212121;
+$color_gray: #6d6875;
+$color_white: #f9f9f9;
+
+$shadow_card: 0.5rem 0.5rem 20px rgba(30, 30, 30, 0.5);
+
+$spacing: 1.5rem;
+$radius: 1rem;
+
+$grid_cols: 1.25fr 0.5fr repeat(6, 1fr) 0.5fr 1.25fr;
+$grid_rows: 0.75fr 0.5fr repeat(4, 1fr) 0.5fr 0.75fr;
+
+$font_small: 1.2rem;
+$font_med: 1.75rem;
+$font_big: 3.5rem;
+$font_huge: 6rem;
+$font_title: 8rem;
+
+:export {
+  colorprimary: $color_primary;
+  colorsecondary: $color_secondary;
+  colortertiary: $color_tertiary;
+  colorblack: $color_black;
+  colorwhite: $color_white;
+  colorgray: $color_gray;
+  radius: $radius;
+  spacing: $spacing;
+}
